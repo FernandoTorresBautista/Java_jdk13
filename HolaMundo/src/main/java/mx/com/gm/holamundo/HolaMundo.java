@@ -149,7 +149,129 @@ public class HolaMundo {
         /**
          * Base decimal, hexadecimal y octal
          */
+        int numeroDecimal = 10;
+        System.out.println(numeroDecimal);
+        int numeroOctal = 012;
+        System.out.println(numeroOctal);
+        int numeroHexadecimal = 0xA;
+        System.out.println(numeroHexadecimal);
+        int numeroBinario = 0b1010; // 0b -> binario
+        System.out.println(numeroBinario);
+        // var
+        var numeroCualquier = 10; // 012, 0xA, 0b1010
+        System.out.println(numeroCualquier); // Toma el valor de lo asignado
+        // 2.0 Flotantes
+        /**
+         * float, double
+         */
+        float floatVar = 1000.00F; //tipo double por default a tipo float x...x(F)
+        var floatVar_2 = 1000.00F; // Var de igual forma se define con el literal
+        System.out.println(floatVar);
+        System.out.println(floatVar_2);
         
+        System.out.println("bits en el tipo float:" + Float.SIZE);
+        System.out.println("bytes en el tipo float:" + Float.BYTES);
+        System.out.println("Valor mínimo del tipo float:" + Float.MIN_VALUE);
+        System.out.println("Valor máximo del tipo float:" + Float.MAX_VALUE);
+        
+        double doubleVar = 1000D; // Con D
+        var doubleVar_2 = 1000D; // Var sin la D sería un entero
+        System.out.println(doubleVar);
+        System.out.println(doubleVar_2);
+        
+        System.out.println("bits en el tipo double:" + Double.SIZE);
+        System.out.println("bytes en el tipo double:" + Double.BYTES);
+        System.out.println("Valor mínimo del tipo double:" + Double.MIN_VALUE);
+        System.out.println("Valor máximo del tipo double:" + Double.MAX_VALUE);
+        // 3.0 
+        /** 
+         * Tipo char
+         */
+        System.out.println("bits en el tipo char:" + Character.SIZE);
+        System.out.println("bytes en el tipo char:" + Character.BYTES);
+        System.out.println("Valor mínimo del tipo char:" + Character.MIN_VALUE);
+        System.out.println("Valor máximo del tipo char:" + Character.MAX_VALUE);
+        char varChar = 'a';
+        System.out.println(varChar);    //3 formas de manejarlos, por var es lo mismo excepto:
+        char porUnicode = '\u0021';     // por códugo unicode,
+        char porNumeroDecimal = 33;     // por su número decimal equivalente, en caso de usar var no es recomendable
+        char porSimbolo = '!';          // por el simbolo directamnete,
+        System.out.println(porUnicode);
+        System.out.println(porNumeroDecimal );
+        System.out.println(porSimbolo);
+        // 4.0 
+        /**
+         * Boolean
+         */
+        //No tiene definido cuántos bites ocupa 32 o 64 dependiendo de la platarforma o so
+        System.out.println(Boolean.TRUE);
+        System.out.println(Boolean.FALSE);
+        var varBoolean = 2 > 1;
+        System.out.println(varBoolean);
+        // 5.0
+        /**
+         * Conversión de tipos primitivos   
+         */
+        //convertir un String a un tipo int
+        var edad = Integer.parseInt("20");// o int edad = ...
+        System.out.println(edad);
+        // entero a double
+        var valorPI = Double.parseDouble("3.1416");
+        System.out.println(valorPI);
+        // cadena a char, 1 valor
+        char parseStoCa = "HoLa".charAt(0);// se inicia en 0, 1, ...
+        System.out.println(parseStoCa);
+        //  leer un número de consola
+        var scanner = new Scanner(System.in);
+        int edad_5 = Integer.parseInt(scanner.nextLine()); // leer un número desde consola
+        System.out.println( edad_5 );
+        char caracter_5 = scanner.nextLine().charAt(0); // puedes concatenar el método para que te obtenga un caracter x
+        System.out.println(caracter_5);
+        
+        String edadEnTexto = String.valueOf(10);//De cualquier tipo de datos primivitos
+        System.out.println(edadEnTexto);
+        edadEnTexto = String.valueOf(false);//De cualquier tipo de datos primivitos
+        System.out.println(edadEnTexto);
+        
+        edadEnTexto = String.valueOf(false);//De cualquier tipo de datos primivitos
+        System.out.println(edadEnTexto);
+        
+        char a_entretipos = 10;
+        byte b_entretipos = (byte)a_entretipos ;//sin el cart hubiera error, un char no cabe en un byte
+        System.out.println( b_entretipos ); // 
+        //byte b_entretipos = (short)a_entretipos ;//por el tamaño no soportado tendrá una perdida de bites, así es
+        
+        /**
+         * Tarea
+         */
+        System.out.println("Tarea");
+        tarea3();
+    }
+    
+    /**
+     * Para imprimir poner la clase :
+     * public class Main{
+     *  public static void main(String[] agrs){
+     *   ... (código de la función tarea3)
+     *  }
+     * }
+     */
+    public void tarea3(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Proporciona el nombre:");
+        String nombre = scanner.nextLine();
+        System.out.println("Proporciona el id:");
+        int id = Integer.parseInt(scanner.nextLine());
+        System.out.println("Proporciona el precio:");
+        double precio = Double.parseDouble(scanner.nextLine());
+        System.out.println("Proporciona el simbolo:");
+        char simbolo = scanner.nextLine().charAt(0);
+        System.out.println("Proporciona el envio gratuito:");
+        boolean envioGratuito = Boolean.parseBoolean(scanner.nextLine());
+        
+        System.out.println(nombre + " #" + id );//<nombre> #<id>
+        System.out.println("Precio: " + simbolo + precio);//Precio: <simbolo><precio>
+        System.out.println("Envio Gratuito: " + envioGratuito);//Envio Gratuito: <envioGratuito>
     }
 }
 
