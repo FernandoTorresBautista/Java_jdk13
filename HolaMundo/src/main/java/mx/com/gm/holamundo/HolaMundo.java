@@ -9,13 +9,21 @@ public class HolaMundo {
      *  Sección 1: Instalación de requerimientos del curso
      *  Sección 2: Variables en java
      *  Sección 3: Tipos primitivos en java
-     *  Sección 4: 
+     *  Sección 4: Operadores en java
+     *  Sección 5: Sentencias de control
+     *  Sección 6: Ciclos en java
      */
     public static void main(String[] args) {
         HolaMundo secciones = new HolaMundo();
-        secciones.seccion2();
+        /*secciones.seccion2();
         System.out.println("\n");
         secciones.seccion3();
+        System.out.println("\n");
+        secciones.seccion4();
+        System.out.println("\n");
+        secciones.seccion5();*/
+        System.out.println("\n");
+        secciones.seccion6();
     }
     
     /**
@@ -273,5 +281,341 @@ public class HolaMundo {
         System.out.println("Precio: " + simbolo + precio);//Precio: <simbolo><precio>
         System.out.println("Envio Gratuito: " + envioGratuito);//Envio Gratuito: <envioGratuito>
     }
+    
+    /**
+     * Sección 4: Operadores en java
+     */
+    public void seccion4(){
+        // 0.0 
+        /**
+         * Operadoresa atirmeticos en java
+         */
+        System.out.println("Operadoresa atirmeticos en java");
+        int a=1, b=2;
+        int resultado = a + b;
+        System.out.println("r: " + resultado);
+        System.out.println("r: " + (a + b));//sin el () nos concatenaría
+        //resta -
+        //multiplicación *
+        //división /
+        //modulo %        
+        
+        //tarea
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Proporciona el alto:");
+        int alto = Integer.parseInt(scanner.nextLine());
+        System.out.println("Proporciona el ancho:");
+        int ancho = Integer.parseInt(scanner.nextLine());
+        System.out.println("Area: " + (alto*ancho) );
+        System.out.println("Perimetro: " + ((alto+ancho)*2));
+        
+        // 1.0 
+        /**
+         * Operadores en Asignación en java
+         */
+        a =3;
+        b=2;
+        int r = a+5-b;
+        System.out.println(r);
+        a += 1;//suma
+        a -= 1;//resta
+        // *=, /=, %=
+        // 2.0 
+        /**
+         * Operadores Unarios en java
+         */
+        a = 3;
+        b = -a;
+        boolean c = true;
+        boolean d = !c;
+        int e = 3;
+        int f = ++e;
+        System.out.println(e + ", " + f);//4, 4
+        int g = 5;
+        int h = g++;
+        System.out.println(g + ", " + h);//6, 5
+        e = 3;
+        f = --e;
+        System.out.println(e + ", " + f);//2, 2
+        g = 5;
+        h = g--;
+        System.out.println(g + ", " + h);//4, 5
+        
+        // 2.0 
+        /**
+         * Operadores de Igualdad y Relacionales en java
+         */
+        a = 2;
+        b = 3;
+        c = a==b;   //igualdad
+        System.out.println(c);
+        c = a!=b;           //es diferente de
+        System.out.println(c);
+        String str1 = "hola";
+        String str2 = "adios";
+        System.out.println(str1.equals(str2)); // en strings con equals
+        c = a < b;
+        System.out.println(c); //true
+        c = a > b;
+        System.out.println(c); //false
+        // >=, <=, 
+        if( b%2 == 0){
+            System.out.println("numero par");
+        }
+        else{
+            System.out.println("numero impar");
+        }
+        
+        // 3.0 
+        /**
+         * Operadores condicionales
+         */
+        a = 10;  //int 
+        int valorMinimo = 0, valorMaximo = 10;
+        boolean respuesta = a >= valorMinimo && a <= valorMaximo;  // ||->or, &&->and
+        System.out.println(respuesta);
+        
+        // 4.0 
+        /**
+         * Operador ternario
+         */
+        respuesta = (3 > 2)?true:false;
+        System.out.println(respuesta);
+        // var para soportar cualquier valor que regrese 
+        var res_return_all = (valorMinimo < valorMaximo)?"true":"false";//regresa un string 
+        System.out.println(res_return_all);
+        
+        //tarea 
+        System.out.println("Proporciona el numero1:");
+        int numero1 = Integer.parseInt(scanner.nextLine());
+        System.out.println("Proporciona el numero2:");
+        int numero2 = Integer.parseInt(scanner.nextLine());
+        System.out.println("El numero mayor es:\n" + ((numero1 > numero2)?numero1:numero2) );
+        
+        // 5.0 
+        /**
+         * Precedencia de operadores
+         */
+        var x = 5;
+        var y = 10;
+        var z = ++x + y--; // x=5 y=10
+        System.out.println(z);// 16
+        //z = ++x + y--; // x=5 y=10
+        //System.out.println(z);// 16
+        // 1. ()
+        // 2. % * /
+        // + - 
+        
+        /**
+         * Tarea
+         */
+        System.out.println("Tarea");
+        tarea4();
+    }
+    
+    public void tarea4(){
+        int a = 2;
+        int b = 3;
+        int res = -3 + 6 / ++a * 4 - b-- + b;
+        System.out.println(6 / 3); //Imprime 2
+        System.out.println(2 * 4 ); //imprime 8
+        System.out.println(-3 + 8); //imprime 5
+        System.out.println(5 - 3); //imprime 2
+        System.out.println(2 + 2);//imprime 4,
+        System.out.println("res: " + res);
+    }
+    
+    /**
+     * 5.0 Sentencias de control
+     */
+    public void seccion5(){
+        // 1.0      
+        var condicion = true;   // Se pueden usar as agrupaciones de condicionales 
+        // numero = 1, 
+        if(condicion){ // numero == 3, 
+            System.out.println("true");
+        }
+        /*else if( numero == 2 ){ 
+            System.out.println("numero == 2");
+        }*/
+        else{
+            System.out.println("Ninguna");
+        }
+        
+        //switch
+        // Antes del jdk 7 sólo soportaba las expresiones de los tipos:
+        // byte short int char 
+        // > jdk 7  ->  String
+        var expresion = 3;
+        switch(expresion){
+            case 1:
+                System.out.println("op 1");
+                break;
+            case 2:
+                System.out.println("op 2");
+                break;
+            default:
+                System.out.println("no one");
+                break;
+        }
+        // Operadores 
+        //  && || ^   !, and or xor->(ambas entradas iguales) not
+        // Oper. Relacionales -> 
+        //  > >= < <= == !=
+        
+        /**
+         * Tarea 5
+        */
+        tarea5();
+        
+        // if
+        var mes = 0;
+        String estacion = null;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingresa un mes del año: ");
+        mes = scanner.nextInt(); 
+        
+        if( mes==1 || mes==2 || mes ==12 ){
+            estacion = "invierno";
+        }
+        else if( mes==3 || mes==4 || mes ==5  ){
+            estacion = "primavera";
+        }
+        else if( mes==6 || mes==7 || mes ==8  ){
+            estacion = "verano";
+        }
+        else if( mes==9 || mes==10 || mes ==11  ){
+            estacion = "otoño";
+        }
+        else{
+            estacion = "Mes incorrecto";
+        }
+        System.out.println("estacion: " + estacion);
+        //
+        //switch
+        var numero = 0;
+        var numeroTexto = "Numero";
+        switch(numero){
+            case 1:
+                numeroTexto = "Numero uno";
+                break;
+            case 2:
+                numeroTexto = "Numero dos";
+                break;
+            default:
+                numeroTexto = "Numero desconocido";
+                break; //Puede o no agregarse
+        }
+        System.out.println(numeroTexto);
+        //
+        //
+        mes = scanner.nextInt();
+        switch(mes){
+            case 1:case 2:case 12:
+                System.out.println("Invierno");
+                break;
+            case 3:case 4:case 5:
+                System.out.println("Primavera");
+                break;
+            case 6:case 7:case 8:
+                System.out.println("Verano");
+                break;
+            case 9:case 10:case 11:
+                System.out.println("Otoño");
+                break;
+            default:
+                System.out.println("Mes deconocido");
+                break;
+        }
+    }
+    
+    // Tarea 5 sección 5
+    public void tarea5(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Proporciona un valor entre 0 y 10:");
+        int calificacion = Integer.parseInt(scanner.nextLine());
+        //Si esta entre 9 y 10 imprimir: A
+        if (calificacion >= 9 && calificacion <= 10)
+            System.out.println("A");
+        //Si esta entre  8 y menor a 9 imprimir: B
+        else if(calificacion >= 8 && calificacion < 9)
+            System.out.println("B");
+        //Si esta entre 7 y menor a 8 imprimir: C
+        else if(calificacion >= 7 && calificacion < 8)
+            System.out.println("C");
+        //Si esta entre 6 y menor a 7 imprimir: D
+        else if(calificacion >= 6 && calificacion < 7)
+            System.out.println("D");
+        //Si esta entre 0 y menor a 6 imprimir: F
+        else if(calificacion >= 0 && calificacion < 6)
+            System.out.println("F");
+        //Si no esta en el rago, imprimir: Valor desconocido
+        else
+            System.out.println("Valor desconocido");
+    }
+
+    /**
+     * 6.0 Ciclos en Java
+     */
+    public void seccion6(){
+        // 1.0 Ciclo while()
+        //while( valorBooleano ){...}
+        // 2.0 Ciclo do...while();
+        //do{...}while(valorBooleano);
+        // 3.0 Ciclo for
+        //for( inicializacion; condicion; iteracion  ){}//condicion booleana
+        // 4.0 Ciclo while, do...while
+        // La condición se puede dar por expreiones con valor booleano
+        var bool = true;
+        while(bool){
+            System.out.println("Valor de bool:" + bool);
+            if(bool){
+                bool = false;
+            }
+        }
+        do{
+            System.out.println("Valor de bool:" + bool);
+            if(bool){
+                bool = false;
+            }
+        }while(bool);
+        // 5.0 For
+        for( var a=0; a<2; a++ ){
+            System.out.println("Valor de a: " + a);
+        }
+        // 6.0 Palabras: Break y continue;
+        // break puede romper la ejecución de ciclos while, do while, for
+        for( var a=0;a<4;a++ ){
+            System.out.println("Valor de a (con break): " + a);
+            break;
+        }//Solo se imprimira una vez
+        for( var a=0;a<4;a++ ){
+            if( a==0 ){
+                continue;
+            }
+            System.out.println("Valor de a (con continue): " + a);
+        }//No se imprimira nada ya que desde 0 se sale del ciclo
+        
+        // 7.0 
+        // Uso de etiquetas, casi no se usa, se parecen al go to de c y sólo es para
+        // saber que existen en caso de certifición
+        // ->  donde se rompe y hacía donde ir en ese caso
+        // continue inicio:
+        // break inicio:
+        
+        inicio:
+        for( var i=0; i<3; i++){
+            //imprimimos solo numero pares
+            if( i % 2 != 0 ){
+                break inicio;
+                //continue inicio; 
+            }
+            System.out.println("i = " + i);
+        }
+        
+        
+    }
+    
+    //    
 }
 
