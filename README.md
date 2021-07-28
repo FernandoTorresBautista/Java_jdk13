@@ -8,28 +8,38 @@ Java, POO, JDBC, Servlets, JSPs, Java EE, Web Services, JSF, EJB, JPA, PrimeFace
 # 
 # Secciones
 ## Fundamentos de Java
-- Sección 1 : Instalación Java 13 + Apache Netbeans
-- Sección 2 : Varibles
-- Sección 3 : Tipos primitivos
-- Sección 4 :  Operadores
-- Sección 5 : Sentencias de control
-- Sección 4 : Operadores en java 
-- Sección 5 : Sentencias de control
-- Sección 6 : Ciclos en java
-- Sección 7 : Clases en Java
-- Sección 8 : Creacion de objetos en java 
-- Sección 9 : Metodos en java 
-- Sección 10 : Contructores en java 
-- Sección 11 : Alcance de Variables en java 
-- Sección 12 : Memoria Stack y Heap en java 
-- Sección 13 : Paso por Valor y Paso por Referencia 
-- Sección 14 : Uso de la palabra return en java 
-- Sección 15 : Uso de la palabra this en java 
-- Sección 16 : USo de la palabra null en java 
-- Sección 17 : Encapsulamiento en java 
-- Sección 18 : Contexto Estático en java (palabra static) 
-- Sección 19 : Herencia en java
-- Sección 20 : 
-- Sección 21 : 
-- Sección 22 : 
-- Sección 23 : 
+Sección 1 a 23
+- Instalación Java 13 + Apache Netbeans
+- Varibles
+- Tipos primitivos
+- Operadores
+- Sentencias de control
+- Operadores en java 
+- Sentencias de control
+- Ciclos en java
+- Creación de Clases en Java
+- Creación de objetos en java ** se cambio
+- Metodos en java 
+- Contructores en java 
+- Alcance de Variables en java 
+- Memoria Stack y Heap en java ** se cambio
+- Paso por Valor y Paso por Referencia 
+- Uso de la palabra return en java ** se cambio
+- Uso de la palabra return y null 
+- Uso de la palabra this en java 
+- USo de la palabra null en java ** se cambio 
+- Encapsulamiento en java 
+- Contexto Estático en java (palabra static) 
+- Herencia en java
+- Sobrecarga de constructores y métodos 
+- Paquetes en Java
+- Uso de la palabra final
+- Manejo de arreglos (arrays)
+- Manejo de matrices
+- Diseño de clases
+- Conclusion de Fundamentos
+#
+## POO
+Seccion 24 a 42
+- Argumentos variables 
+-  
